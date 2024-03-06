@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ascii2code</title>
+		<link href="style.css" rel="stylesheet" />
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<main>
+			<div id="settings" class="settings settings-close">
+				<button onclick="settings.classList.toggle('settings-close')">
+					settings
+				</button>
+				<div class="check-box-group">
+					<label
+						class="custom-checkbox"
+						tab-index="0"
+						aria-label="first and last"
+					>
+						<input id="firstAndLast" type="checkbox" checked />
+						[<span class="checkmark"></span>]
+						<span class="label">first and last</span>
+					</label>
+
+					<label
+						class="custom-checkbox"
+						tab-index="0"
+						aria-label="colon"
+					>
+						<input id="colon" type="checkbox" checked />
+						[<span class="checkmark"></span>]
+						<span class="label">colon at last letter</span>
+					</label>
+
+					<div>
+						<label class="custom-checkbox">
+							[<span class="folder">*</span>]
+							<span class="label">set letter beffore</span>
+						</label>
+						<ul>
+							<label
+								class="custom-checkbox"
+								tab-index="0"
+								aria-label="set letter beffore"
+							>
+								<input id="backSlash" type="checkbox" checked />
+								[<span class="checkmark"></span>]
+								<span class="label">\ back slash</span>
+							</label>
+							<label
+								class="custom-checkbox"
+								tab-index="0"
+								aria-label="set letter beffore"
+							>
+								<input
+									id="doubleQuotation"
+									type="checkbox"
+									checked
+								/>
+								[<span class="checkmark"></span>]
+								<span class="label">" double quotation</span>
+							</label>
+							<label
+								class="custom-checkbox"
+								tab-index="0"
+								aria-label="set letter beffore"
+							>
+								<input
+									id="singleQuotation"
+									type="checkbox"
+									checked
+								/>
+								[<span class="checkmark"></span>]
+								<span class="label">' single quotation</span>
+							</label>
+							<label
+								class="custom-checkbox"
+								tab-index="0"
+								aria-label="set letter beffore"
+							>
+								<input id="backtick" type="checkbox" checked />
+								[<span class="checkmark"></span>]
+								<span class="label">` backtick</span>
+							</label>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div>
+				<textarea class="title" readonly>
+ █████╗ ███████╗ ██████╗██╗██╗     ██████╗ ██████╗     ████████╗███████╗██╗  ██╗████████╗
+██╔══██╗██╔════╝██╔════╝██║██║    ██╔═══██╗██╔══██╗    ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝
+███████║███████╗██║     ██║██║    ██║   ██║██████╔╝       ██║   █████╗   ╚███╔╝    ██║   
+██╔══██║╚════██║██║     ██║██║    ██║   ██║██╔══██╗       ██║   ██╔══╝   ██╔██╗    ██║   
+██║  ██║███████║╚██████╗██║██║    ╚██████╔╝██║  ██║       ██║   ███████╗██╔╝ ██╗   ██║   
+╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝╚═╝     ╚═════╝ ╚═╝  ╚═╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝   
+				</textarea
+				>
+				<textarea id="input"></textarea>
+			</div>
+			<div class="btns">
+				<button onclick="convert()">convert</button>
+				<button onclick="copy()">copy</button>
+			</div>
+
+			<div>
+				<textarea class="title" readonly>
+████████╗ ██████╗      ██████╗ ██████╗ ██████╗ ███████╗
+╚══██╔══╝██╔═══██╗    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+   ██║   ██║   ██║    ██║     ██║   ██║██║  ██║█████╗  
+   ██║   ██║   ██║    ██║     ██║   ██║██║  ██║██╔══╝  
+   ██║   ╚██████╔╝    ╚██████╗╚██████╔╝██████╔╝███████╗
+   ╚═╝    ╚═════╝      ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+				</textarea
+				>
+				<div class="line"></div>
+				<textarea id="output" readonly></textarea>
+			</div>
+		</main>
+	</body>
+</html>

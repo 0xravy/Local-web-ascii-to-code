@@ -1,0 +1,194 @@
+* {
+	font-family: monospace;
+	scrollbar-color: cyan #0000000a;
+	list-style-type: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+input[type='checkbox']::before {
+	/* ...existing styles */
+
+	/* Windows High Contrast Mode */
+	background-color: CanvasText;
+}
+
+body html {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--bg: #293138;
+	--fg: #5d6f7b;
+	--tx: #00ffe4;
+	--btn-bg: #00b11e;
+	--btn-tx: #000000;
+	--bs: #04b0ed;
+	--fs: black;
+}
+
+::-moz-selection {
+	/* Code for Firefox */
+	background: var(--bs);
+	color: var(--fs);
+}
+
+::selection {
+	background: var(--bs);
+	color: var(--fs);
+}
+
+body {
+	background: var(--bg);
+	color: var(--tx);
+}
+
+input {
+	background: var(--bg);
+	color: var(--tx);
+}
+
+.title {
+	text-align: center;
+	height: 150px;
+	border: none;
+	margin-top: 2rem;
+}
+
+.check-box-group {
+	display: flex;
+	flex-direction: column;
+	border-top: 2px solid var(--fg);
+}
+
+.custom-checkbox {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 0;
+}
+
+.custom-checkbox:hover {
+	background: #394753;
+}
+
+.custom-checkbox .label {
+	color: #fff;
+	font-size: 1.2em;
+	margin: 0 10px;
+}
+
+.custom-checkbox .checkmark,
+.custom-checkbox .folder {
+	width: 20px;
+	height: 20px;
+	/* border: 1px solid gray; */
+	border: none;
+	display: inline-block;
+	border-radius: 3px;
+	background: var(--bg)
+		url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png)
+		center/1250% no-repeat;
+	transition: background-size 0.2s ease;
+}
+
+.custom-checkbox .folder {
+	background: none;
+	border: 1px solid #80808000;
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+.custom-checkbox input:checked + .checkmark {
+	background-size: 60%;
+	transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
+}
+
+.custom-checkbox input {
+	display: none;
+}
+
+main {
+	text-align: center;
+	margin: 3rem auto;
+	width: calc(min(1000px, 95%));
+}
+
+.settings {
+	text-align: start;
+	overflow: hidden;
+	display: grid;
+	gap: 1rem;
+	transition: all 0.5s linear;
+	max-height: 500px;
+}
+
+.settings-close {
+	transition: all 0.3s linear;
+	max-height: 50px;
+}
+
+.settings button {
+	background: none;
+	color: var(--tx);
+	border: 2px gray;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	border-style: dashed;
+	font-size: 1.8rem;
+}
+
+.settings button:hover {
+	border-color: var(--tx);
+	transition: all 0.3s linear;
+	background: var(--tx);
+	color: var(--bg);
+}
+
+.line {
+	margin: 3rem;
+	height: 5px;
+	background: var(--fg);
+	border-radius: 50px;
+}
+
+div textarea {
+	width: 100%;
+	height: 600px;
+	resize: none;
+	background: var(--bg);
+	color: var(--tx);
+	border-width: 2px;
+}
+
+.btns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	height: 130px;
+}
+
+.btns button {
+	padding: 1rem;
+	font-size: 3rem;
+	font-weight: 900;
+	/* background: var(--btn-bg); */
+	background: none;
+	color: var(--tx);
+	border: 3px gray;
+	border-radius: 10px;
+	border-style: dashed;
+	transition: all 0.3s linear;
+}
+.btns button:hover {
+	border-color: var(--tx);
+	transition: all 0.3s linear;
+	background: var(--tx);
+	color: var(--bg);
+}
+
+#output {
+	border: none;
+}
